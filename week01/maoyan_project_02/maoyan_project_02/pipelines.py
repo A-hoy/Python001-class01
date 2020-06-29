@@ -10,13 +10,13 @@
 class MaoyanMoviePipeline:
     def open_spider(self, spider):
         with open('film.csv', 'w', encoding='utf-8') as fout:
-            fout.write('电影名称，影片类型，上映日期\n')
+            fout.write('电影名称, 影片类型, 上映日期\n')
 
     def process_item(self, item, spider):
         name = item['name']
         film_type = item['film_type']
         release_date = item['release_date']
-        film_data = f'{name}，{film_type}，{release_date}\n'
+        film_data = f'{name}, {film_type}, {release_date}\n'
 
         with open('film.csv', 'a', encoding='utf-8') as fout:
             fout.write(film_data)
