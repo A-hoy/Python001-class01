@@ -12,9 +12,9 @@ BOT_NAME = 'maoyan_project_02'
 SPIDER_MODULES = ['maoyan_project_02.spiders']
 NEWSPIDER_MODULE = 'maoyan_project_02.spiders'
 
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'maoyan_project_02 (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '\
+             '(KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -63,7 +63,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'maoyan_project_02.pipelines.MaoyanMoviePipeline': 300,
+    'maoyan_project_02.pipelines.MaoyanMoviePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
