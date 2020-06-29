@@ -20,7 +20,6 @@ for info in movies_info:
     film_type = div_element(string=True)[-1].strip()
     release_date = info.select_one('div:last-child')(string=True)[-1].strip()
     film_info.append((name, film_type, release_date))
-    print(film_info)
 
 film_data = pd.DataFrame(data=film_info, columns=('电影名称', '影片类型', '上映日期'))
-film_data.to_csv('./film.csv', encoding='utf8', index=False)
+film_data.to_csv('./film.csv', encoding='utf-8', index=False)
