@@ -1,0 +1,45 @@
+{
+    "id": 21969311,
+    "name": "Danpier",
+    "name_pinyin": "d|'danpier",
+    "email": "danpier@pm.me",
+    "avatar": "https://assets.smcdn.cn/static/unmd5/default-avatar-moke.2.png",
+    "status": 0,
+    "team": null,
+    "teamRole": null,
+    "teamTime": null,
+    "team_time": null,
+    "team_role": null,
+    "isSeat": 0,
+    "is_seat": 0,
+    "createdAt": "2019-07-14T15:18:49.000Z",
+    "merged_into": null,
+    "mergedInto": null,
+    "teamId": null,
+    "team_id": null,
+    "mobile": null,
+    "hasPassword": true,
+    "membership": {
+        "accountTypeExpiredAt": "2020-06-14T16:00:00.000Z",
+        "accountTypeCreatedAt": "2020-01-28T16:43:04.000Z",
+        "accountType": "personal_free",
+        "isEnterprisePremium": false,
+        "isExpired": true,
+        "isNewDing": false,
+        "isOfficial": true
+    },
+    "accountMetadata": {
+        "isExpired": false,
+        "isDingtalk": false,
+        "isWework": false,
+        "isEnterprise": false,
+        "isFreeEnterprise": false,
+        "expiredAt": {
+            "seconds": 1909703062,
+            "nanos": 245425898
+        },
+        "isTrial": false,
+        "isPersonalPremium": false,
+        "isEnterprisePremium": false
+    }
+}

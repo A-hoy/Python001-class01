@@ -34,16 +34,25 @@ class MaoyanMysqlPipeline:
         )
 
     def process_item(self, item, spider):
-        print(item['film_name'], item['film_type'], item['release_date'])
-        with self.conn.cursor() as cursor:
-            sql = 'INSERT `maoyan_film` (`film_name`, `film_type`, '\
-                  '`release_date`) VALUES (%s, %s, %s)'
-            cursor.execute(
-                sql,
-                (item['film_name'], item['film_type'], item['release_date']))
-        self.conn.commit()
+        # print(item['film_name'], item['film_type'], item['release_date'])
+        print(item)
+
+        # with self.conn.cursor() as cursor:
+        #     sql = 'INSERT INTO `maoyan_film` (`film_name`,  `release_date`)'\
+        #           'VALUES (%s, %s)'
+        #     cursor.execute(sql, (item['film_name'], item['release_date']))
+
+        #     sql = 'INSERT INTO `film_type` (`film_name`, `type`) VALUES '\
+        #           '(%s, %s)'
+        #     for film_type in item['film_type']:
+        #         cursor.execute(sql, (item['film_name'], film_type))
+
+        # self.conn.commit()
 
         return item
 
     def close_spider(self, spider):
         self.conn.close()
+
+
+# class
