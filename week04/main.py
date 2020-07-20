@@ -23,21 +23,25 @@ table2 = pd.DataFrame({
 # 1. SELECT * FROM data;
 print(' 1 '.center(79, '-'))
 
-setting = pd.read_json('mysql_setting.json', typ='series').to_dict()
 
-try:
-    conn = pymysql.connect(
-        host=setting['host'],
-        user=setting['user'],
-        password=setting['password'],
-        db=setting['db'],
-        charset=setting['charset'],
-    )
-except Exception:
-    print('failed to connect to MySQL')
-else:
-    with conn:
-        print(pd.read_sql('SELECT * FROM data', conn))
+def fetch_data_table(setting):
+    try:
+        conn = pymysql.connect(
+            host=setting['host'],
+            user=setting['user'],
+            password=setting['password'],
+            db=setting['db'],
+            charset=setting['charset'],
+        )
+    except Exception:
+        print('failed to connect to MySQL')
+    else:
+        with conn:
+            return pd.read_sql('SELECT * FROM data', conn)
+
+
+setting = pd.read_json('mysql_setting.json', typ='series').to_dict()
+print(fetch_data_table(setting))
 
 # 2. SELECT * FROM data LIMIT 10;
 print(' 2 '.center(79, '-'))
